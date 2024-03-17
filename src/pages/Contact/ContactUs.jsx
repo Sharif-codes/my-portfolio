@@ -23,13 +23,13 @@ const ContactUs = () => {
       });
   };
   return (
-    <Card color="transparent" shadow={false}>
-      <Typography variant="h4" color="" className="text-center text-4xl text-primary">
+    <Card color="transparent" shadow={false} className="pt-20 flex flex-col justify-center items-center">
+      <Typography variant="h4" color="" className="text-4xl text-primary">
         Contact Me
       </Typography>
       <form ref={form} onSubmit={sendEmail} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
         <div className="mb-1 flex flex-col gap-6">
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray" className="-mb-2">
             Your Name
           </Typography>
           <Input
@@ -41,7 +41,7 @@ const ContactUs = () => {
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray" className="-mb-2">
             Your Email
           </Typography>
           <Input
@@ -53,7 +53,7 @@ const ContactUs = () => {
               className: "before:content-none after:content-none",
             }}
           />
-          <Typography variant="h6" color="blue-gray" className="-mb-3">
+          <Typography variant="h6" color="blue-gray" className="-mb-2">
             Text
           </Typography>
           <Textarea
@@ -68,7 +68,7 @@ const ContactUs = () => {
           />
         </div>
 
-        <Button type="submit" className="mt-6 bg-primary" fullWidth>
+        <Button type="submit" className="bg-primary mb-7" fullWidth>
           Send Email
         </Button>
       </form>

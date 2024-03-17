@@ -19,7 +19,7 @@ const Home = () => {
             <div className="bg-stone-200 rounded-xl ">
             <Projects></Projects>
             </div>
-            <div className="bg-stone-200 rounded-xl flex justify-center">
+            <div className="bg-stone-200 rounded-xl">
             <ContactUs></ContactUs>
             </div>
         </div>

@@ -1,53 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import pdf from '../../assets/Sharif.pdf'
-
 
 const Nav = () => {
    
-    // const handleDownload = () => {
-    //     const pdfUrl = URL.createObjectURL(pdf);
-    //     const link = document.createElement('a');
-    //     link.href = pdfUrl;
-    //     link.download = 'Sharif_Bhuyan.pdf';
-    //     link.rel = 'noopener noreferrer'; // Improve security
-    //     document.body.appendChild(link);
-      
-    //     // Trigger a click event on the link
-    //     link.click();
-      
-    //     // Remove the link from the document body after a short delay
-    //     setTimeout(() => {
-    //       document.body.removeChild(link);
-    //       URL.revokeObjectURL(pdfUrl); // Release the object URL
-    //     }, 100);
-    //   };
-    const handleDownload = () => {
-  const pdfBlob = new Blob([pdf], { type: 'application/pdf' });
-  const pdfUrl = URL.createObjectURL(pdfBlob);
-  
-  const link = document.createElement('a');
-  link.href = pdfUrl;
-  link.download = 'Sharif_Bhuyan.pdf';
-  link.rel = 'noopener noreferrer';
-  
-  document.body.appendChild(link);
-
-  // Trigger a click event on the link
-  link.click();
-
-  // Remove the link from the document body after a short delay
-  setTimeout(() => {
-    document.body.removeChild(link);
-    URL.revokeObjectURL(pdfUrl); // Release the object URL
-  }, 100);
-};
-
-      
-
     return (
 
-        <div className="drawer bg-blue-600 text-white bg-opacity-30 z-10 fixed">
+        <div className="drawer bg-blue-600 text-white bg-opacity-70 z-10 fixed">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
                 {/* Navbar */}
@@ -60,7 +18,7 @@ const Nav = () => {
                     </div>
                     <div className=" w-1/2 px-2 mx-2 hidden lg:flex lg:justify-start lg:gap-5">
                         <NavLink
-                            to="/messages"
+                            to="/"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
@@ -76,7 +34,7 @@ const Nav = () => {
                             About
                         </NavLink>
                         <NavLink
-                            to="/messages"
+                            to="/contact"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "active" : ""
                             }
@@ -92,8 +50,8 @@ const Nav = () => {
                             {/* Navbar menu content here */}
                             <p>Follow me on</p>
                             <a href="https://github.com/Sharif-codes"><FaGithub className="text-xl lg:text-3xl"></FaGithub></a>
-                            <><FaFacebook className="text-xl lg:text-3xl"></FaFacebook></>
-                            <><FaLinkedin className="text-xl lg:text-3xl"></FaLinkedin></>
+                            <a href="https://www.facebook.com/bangladeshi.tiger.77/"><FaFacebook className="text-xl lg:text-3xl"></FaFacebook></a>
+                            <a href="https://www.likedin.com/in/sharif-bhuyan/"><FaLinkedin className="text-xl lg:text-3xl"></FaLinkedin></a>
                         </ul>
                     </div>
                 </div>
@@ -105,9 +63,9 @@ const Nav = () => {
                 <ul className="menu p-4 w-48 min-h-full bg-blue-800 text-white">
                     {/* Sidebar content here */}
                     <div className="flex flex-col gap-5">
-                        <NavLink>Home</NavLink>
-                        <NavLink>About me</NavLink>
-                        <NavLink>Contact me</NavLink>
+                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/">About me</NavLink>
+                        <NavLink to="/contact">Contact me</NavLink>
                     </div>
 
                 </ul>
